@@ -14,6 +14,13 @@ allprojects {
         config = files("${rootProject.rootDir}/.detekt/detekt.yml")
         buildUponDefaultConfig = true
     }
+
+    // with this, the detekt task is able to find issues everywhere
+    tasks.withType<io.gitlab.arturbosch.detekt.Detekt> detekt@{
+        setSource(files(project.projectDir))
+        exclude("**/*.kts")
+        exclude("**/build/**")
+    }
 }
 
 tasks.register("clean", Delete::class) {
