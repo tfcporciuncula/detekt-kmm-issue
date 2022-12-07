@@ -24,6 +24,10 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.fredporciuncula.detekt.Greeting
 
+// ✅ this is caught by detekt and detektMain
+//    (and not by detektAndroidDebug and detektAndroidRelease)
+class AndroidEmptyClassBlock {}
+
 @Composable
 fun MyApplicationTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
