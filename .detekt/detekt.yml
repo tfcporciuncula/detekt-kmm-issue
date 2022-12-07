@@ -1,0 +1,13 @@
+empty-blocks:
+  EmptyClassBlock:
+    active: true
+
+naming:
+  FunctionNaming:
+    ignoreAnnotated: ['Composable']
+
+style:
+  ForbiddenComment:
+    active: false
+  MagicNumber:
+    active: false
